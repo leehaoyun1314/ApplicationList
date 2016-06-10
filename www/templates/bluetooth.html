@@ -1,0 +1,48 @@
+<ion-view view-title="蓝牙测试">
+    <ion-content>
+        <div class="row">
+            <div class="col">
+                <button class="button button-positive" on-tap="initialize()">初始化</button>
+            </div>
+            <div class="col">
+                <button class="button button-positive" on-tap="enable()">开启蓝牙</button>
+            </div>
+            <div class="col">
+                <button class="button button-positive" on-tap="disable()">关闭蓝牙</button>
+            </div>
+            <div class="col">
+                <button class="button button-positive" on-tap="startScan()">开始扫描</button>
+            </div>
+            <div class="col">
+                <button class="button button-positive" on-tap="retrieveConnected()">恢复连接</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button button-positive" on-tap="disconnect()">断开连接</button>
+            </div>
+            <div class="col">
+                <button class="button button-positive" on-tap="reconnect()">重新连接</button>
+            </div>
+            <div class="col">
+                <button class="button button-positive" on-tap="close()">关闭设备</button>
+            </div>
+            <div class="col">
+                <button class="button button-positive" on-tap="discover()">发现设备</button>
+            </div>
+            <div class="col">
+                <button class="button button-positive">按钮5</button>
+            </div>
+        </div>
+        <div class="row">
+            <ion-list class="col">
+                <ion-item class="item-icon-left item-icon-right" ng-repeat="dev in devices" on-tap="connect(dev.address)">
+                    <i class="icon ion-bluetooth"></i>
+                    {{dev.name}}
+                    <p>{{dev.address}}</p>
+                    <i class="icon ion-chevron-right"></i>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,13 @@
+<ion-view view-title="操作日志">
+    <ion-content>
+        <div class="row">
+            <button class="col button button-positive" on-tap="clear()">清除</button>
+        </div>
+        <ion-list class="row">
+            <ion-item class="col" ng-repeat="log in logs">
+                <span>{{log.time}}</span>
+                <p>{{log.content}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
