@@ -7,7 +7,7 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
+        "cordova-plugin-battery-status": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
         "cordova-plugin-bluetoothle": {
@@ -19,7 +19,7 @@
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
-        "cordova-plugin-battery-status": {
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },

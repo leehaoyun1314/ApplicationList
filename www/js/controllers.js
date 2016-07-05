@@ -52,11 +52,12 @@ angular.module('appCtrl.controllers', [])
                         }, function(error) {
                             Logger.add('停止扫描出错' + JSON.stringify(error));
                         });
+                        $timeout.cancel(timer);
                     }, 3000);
                     Logger.add('开始扫描成功' + JSON.stringify(result));
-                    $scope.$on('$destroy', function(e) {
-                        $timeout.cancel(timer);
-                    });
+                    // $scope.$on('$destroy', function(e) {
+                    //     $timeout.cancel(timer);
+                    // });
                     return;
                 }
                 if ($scope.bles[result.address] == true) {
